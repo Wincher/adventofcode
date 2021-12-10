@@ -73,6 +73,3 @@ for line in open('8.in'):
                 text += str(k)
     sum += int(text)
 print('part2:', sum)
-                
-
-
