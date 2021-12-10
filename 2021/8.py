@@ -73,3 +73,23 @@ for line in open('8.in'):
                 text += str(k)
     sum += int(text)
 print('part2:', sum)
+                
+
+#another way for part2 slow but fast in coding
+from itertools import *
+
+t = 0
+for line in open('8.in'):
+    b, a = line.strip().split(' | ')
+    b = b.split()
+    a = a.split()
+    origin = ["abcefg", "cf", "acdeg", "acdfg", "bcdf", "abdfg", "abdefg", "acf", "abcdefg", "abcdfg"]
+    tr = set(origin)
+    for x in permutations('abcdefg'):
+        m = {i:j for i, j in zip(x, 'abcdefg')}   
+        c = { ''.join(sorted(map(m.get, s))) for s in b}
+        if c == tr:
+            d = [ ''.join(sorted(map(m.get, s))) for s in a]
+            d = ''.join(str(origin.index(st)) for st in d)
+            t += int(d)
+print('part2:', t)
