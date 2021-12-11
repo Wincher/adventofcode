@@ -1,9 +1,9 @@
 from collections import defaultdict
-from typing import DefaultDict
+from typing import defaultdict
 
 M = defaultdict(int)
 M2 = defaultdict(int)
-for line in open('5.in'):
+for line in open('../puzzleInput/2021/5.in'):
     str1,str2 = line.split('->')
     x1,y1 = str1.strip().split(',')
     x2,y2 = str2.strip().split(',')

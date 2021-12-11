@@ -1,5 +1,5 @@
 from collections import Counter, defaultdict
-A = Counter([int(x) for x in open('6.in').read().strip().split(',')])
+A = Counter([int(x) for x in open('../puzzleInput/2021/6.in').read().strip().split(',')])
 S = dict(A)
 for _ in range(80):
     T = defaultdict(int)

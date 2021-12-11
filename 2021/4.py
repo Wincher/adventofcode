@@ -2,7 +2,7 @@ import sys
 steps = None
 ZONES = []
 grid = []
-for line in open('4.in'):
+for line in open('../puzzleInput/2021/4.in'):
     line = line.strip()
     if steps is None:
         steps = [int(x) for x in line.split(',')]

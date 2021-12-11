@@ -1,5 +1,5 @@
 t = 0
-for line in open('8.in'):
+for line in open('../puzzleInput/2021/8.in'):
     a,b = line.split(' | ')
     for x in b.split():
         if len(x) in [2,3,4,7]:
@@ -8,7 +8,7 @@ print('part1:', t)
 
 sum = 0
 digits = [x for x in 'abcdefg']
-for line in open('8.in'):
+for line in open('../puzzleInput/2021/8.in'):
     a,b = line.split(' | ') 
     A={}
     i = 0
@@ -79,7 +79,7 @@ print('part2:', sum)
 from itertools import *
 
 t = 0
-for line in open('8.in'):
+for line in open('../puzzleInput/2021/8.in'):
     b, a = line.strip().split(' | ')
     b = b.split()
     a = a.split()

@@ -1,7 +1,7 @@
 length = 0
 depth = 0
 
-for line in open('2.in'):
+for line in open('../puzzleInput/2021/2.in'):
     o, x = line.split()
     x = int(x)
     if ('forward' == o):
@@ -17,7 +17,7 @@ print(f'part1: {length*depth}')
 total = 0
 depth = 0
 current_depth = 0
-for line in open('2.in'):
+for line in open('../puzzleInput/2021/2.in'):
     o, x = line.split()
     x = int(x)
     if ('forward' == o):

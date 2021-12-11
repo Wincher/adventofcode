@@ -1,7 +1,7 @@
 import heapq
 from collections import deque
 BOARD = []
-for line in open('9.in'):
+for line in open('../puzzleInput/2021/9.in'):
     BOARD.append([int(x) for x in list(line.strip())])
 len = len(BOARD)
 sum = 0

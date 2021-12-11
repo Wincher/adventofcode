@@ -1,4 +1,4 @@
-A = [ int(x) for x in open('7.in').read().split(',')]
+A = [ int(x) for x in open('../puzzleInput/2021/7.in').read().split(',')]
 print(A)
 SUM = []
 

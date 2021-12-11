@@ -19,5 +19,5 @@ hd = {'User-Agent': 'Mozilla', 'cookie':cookie}
 r = requests.get(url, headers=hd)
 r.raise_for_status()
 print(r.text)
-with open(f'./{year}/{day}.in', 'w') as file:
+with open(f'./puzzleInput/{year}/{day}.in', 'w') as file:
     file.write(r.text) 

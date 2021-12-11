@@ -1,6 +1,6 @@
 sum = 0
 ribbon = 0
-for x in open('2.in'):
+for x in open('../puzzleInput/2015/2.in'):
     n = list(map(int, x.strip().split('x')))
     n.sort()
     x,y,z = n

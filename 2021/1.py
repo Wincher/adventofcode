@@ -1,4 +1,4 @@
-A = [int(x)for x in open('1.in')]
+A = [int(x)for x in open('../puzzleInput/2021/1.in')]
 increase_count = 0
 for i in range(1, len(A)):
     if A[i-1] < A[i]:

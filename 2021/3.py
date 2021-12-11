@@ -1,4 +1,4 @@
-A = [line.strip() for line in open('3.in')]
+A = [line.strip() for line in open('../puzzleInput/2021/3.in')]
 width = len(A[0])
 M = [0 for _ in range(width)]
 for x in A:

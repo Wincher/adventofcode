@@ -11,7 +11,7 @@ v = {
     '<': -1,
     '>': 1,
 }
-for o in open('3.in').read():
+for o in open('../puzzleInput/2015/3.in').read():
     x, y = l
     if o in h.keys():
        x +=h[o] 
@@ -34,7 +34,7 @@ v = {
     '>': 1,
 }
 robot = False
-for o in open('3.in').read():
+for o in open('../puzzleInput/2015/3.in').read():
     x, y = l if not robot else lr
     if o in h.keys():
        x +=h[o] 

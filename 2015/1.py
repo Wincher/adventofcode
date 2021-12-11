@@ -1,7 +1,7 @@
 floor = 0
 count = 0
 found = False
-for i in open('1.in').read():
+for i in open('../puzzleInput/2015/1.in').read():
     floor+=1 if i == '(' else -1
     if not found:
         count+=1

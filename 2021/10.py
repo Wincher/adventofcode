@@ -17,7 +17,7 @@ sum = 0
 
 il = [] #incompleted lines
 sum = 0
-for line in open('10.in'):
+for line in open('../puzzleInput/2021/10.in'):
     sum2 = 0
     stack = []
     interuppted = False
