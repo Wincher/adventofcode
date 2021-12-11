@@ -22,11 +22,22 @@ for line in open('../puzzleInput/2015/5.in'):
     if re.search(r'(\w)\1', line):
         count+=1
 print(f'part1: {count}')
+
 count = 0
 for line in open('../puzzleInput/2015/5.in'):
     line = line.strip()
-    for i in range()
-    print(len(line)) 
-
+    ok = False
+    for i in range(len(line)-2):
+        if line[i]==line[i+2]:
+            ok = True
+            break
+    if not ok:
+        continue
+    ww = {}
+    for i in range(len(line)-1):
+        if line[i:i+2] in ww.keys() and i-ww[line[i:i+2]]>1:
+           count+=1 
+           break
+        else:
+            ww[line[i:i+2]]=i
 print(f'part2: {count}')
-

@@ -1,6 +1,4 @@
 
-from typing import DefaultDict
-
 BOARD = []
 result = 0
 for line in open('../puzzleInput/2021/11.in'):
