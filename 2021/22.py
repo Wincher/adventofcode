@@ -25,6 +25,7 @@ print(f'part1: {len(S)}')
 
 # python3 22.py  294.68s user 177.96s system 87% cpu 8:58.03 total
 # takes too much time and too much mem
+# after optimize using map istead of traversal array 208.29s user 2.94s system 99% cpu 3:31.75 total
 steps = []
 X, Y, Z=[], [], []
 for line in open('../puzzleInput/2021/22.in'):
@@ -45,34 +46,33 @@ for line in open('../puzzleInput/2021/22.in'):
     Y.append(y_max)
     Z.append(z_min)
     Z.append(z_max)
-
 X.sort()
 Y.sort()
 Z.sort()
+xm = {x: i for i, x in enumerate(X)}
+ym = {y: i for i, y in enumerate(Y)}
+zm = {z: i for i, z in enumerate(Z)}
 N = len(X)
-assert N == len(Y) and N == len(Z)
-grid = defaultdict(lambda: defaultdict(lambda: defaultdict(bool)))
-# grid = [[[False for _ in range(N)] for _ in range(N)] for _ in range(N)]
+grid = [[[False]*N for _ in range(N)] for _ in range(N)]
 
-def get_index(arr, v):
-    for i,c in enumerate(arr):
-        if c >= v:
-            return i
+# remove after optimize, using map instead
+# def get_index(arr, v):
+#     for i,c in enumerate(arr):
+#         if c >= v:
+#             return i
 
 for step in steps:
-    x0 = get_index(X, step[0])
-    x1 = get_index(X, step[1])
-    y0 = get_index(Y, step[2])
-    y1 = get_index(Y, step[3])
-    z0 = get_index(Z, step[4])
-    z1 = get_index(Z, step[5])
-    on = step[6]
-    # print(step)
+    # x0 = get_index(X, step[0])
+    # x1 = get_index(X, step[1])
+    # y0 = get_index(Y, step[2])
+    # y1 = get_index(Y, step[3])
+    # z0 = get_index(Z, step[4])
+    # z1 = get_index(Z, step[5])
 
-    for x in range(x0, x1):
-        for y in range(y0, y1):
-            for z in range(z0, z1):
-                grid[x][y][z] = on
+    for x in range(xm[step[0]], xm[step[1]]):
+        for y in range(ym[step[2]], ym[step[3]]):
+            for z in range(zm[step[4]], zm[step[5]]):
+                grid[x][y][z] = step[6]
 
 sum = 0
 for x in range(N-1):
